@@ -1,4 +1,5 @@
-<html lang="ru" m_init="2233643202304060135">
+<!DOCTYPE html>
+<html lang="ru">
 
 <head>
 
@@ -11,20 +12,64 @@
 	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" href="css/fancybox.css">
 	<link rel="stylesheet" href="css/jquery-ui.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css?ver=027">
 
-	<script async="" src="https://mc.yandex.ru/metrika/tag.js"></script>
-	<script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K7W6659"></script>
-	<script src="https://api-maps.yandex.ru/2.1/?apikey=83bc69d1-3d2f-4932-a084-ba016442344f&amp;lang=ru_RU"></script>
-	<style type="text/css" id="operaUserStyle"></style>
-	<link id="operaalerabat-link" rel="stylesheet" type="text/css"
-		href="chrome-extension://eplcjggklbefnipglcfdfalbbjpmkbkl/content.css">
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=83bc69d1-3d2f-4932-a084-ba016442344f&lang=ru_RU"></script>
 	<script
 		type="text/javascript"> (function ab() { var request = new XMLHttpRequest(); request.open('GET',"https://scripts.botfaqtor.ru/one/34606",false); request.send(); if (request.status == 200) eval(request.responseText); })(); </script>
 
+	<style>
+		.calculator-checkbox-number {
+			margin-left: 16px;
+			display: flex;
+			align-items: center;
+			background-color: #fff;
+			border-radius: 2px;
+		}
 
-	<meta name="yandex-verification" content="0b644d6a56084995">
-	<meta name="google-site-verification" content="W6kIt1u3l1ZE0EFDD1oHKwsfgaqZPMbyaB8oRlFdCG0">
+		.calculator-checkbox-number-button {
+			width: 20px;
+			height: 20px;
+			text-align: center;
+			background-color: #04b9b8;
+			color: #fff;
+			border-radius: 2px;
+			font-weight: 500;
+			cursor: pointer;
+			transition: .2s;
+			line-height: 1.4;
+			user-select: none;
+		}
+
+		.calculator-checkbox-number-button:hover {
+			background-color: #1ed4d3;
+		}
+
+		.calculator-checkbox-number-value {
+			width: 24px;
+			height: 20px;
+			text-align: center;
+			line-height: 1.4;
+			font-weight: 500;
+		}
+
+		.include-mobile-item-title {
+			background-color: #f3f5f7;
+			padding: 12px;
+			font-weight: 700;
+			font-size: 16px;
+			border: 1px solid #07c8cf;
+		}
+
+		@media (max-width: 767.98px) {
+			.faq-inner {
+				padding-top: 0;
+			}
+		}
+	</style>
+
+	<meta name="yandex-verification" content="0b644d6a56084995" />
+	<meta name="google-site-verification" content="W6kIt1u3l1ZE0EFDD1oHKwsfgaqZPMbyaB8oRlFdCG0" />
 
 	<!-- Google Tag Manager -->
 	<script>(function (w,d,s,l,i) {
@@ -36,7 +81,6 @@
 					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j,f);
 		})(window,document,'script','dataLayer','GTM-K7W6659');</script>
 	<!-- End Google Tag Manager -->
-
 
 </head>
 
@@ -136,8 +180,8 @@
 						</div>
 
 						<form action="send.php" method="post" class="first-screen-form table-hidden desktop-hidden">
-							<input name="form_tel" type="text" class="first-screen-form-input" data-tel-input=""
-								placeholder="+7 (999) 999-99-99" required="">
+							<input name="form_tel" type="text" class="first-screen-form-input" data-tel-input
+								placeholder="+7 (999) 999-99-99" required>
 							<button type="submit" class="first-screen-form-submit button">Узнать стоимость
 								уборки</button>
 							<input type="hidden" name="form_goal" value="form_top_mobile">
@@ -147,11 +191,8 @@
 						<form class="faina-form faina-form-top mobile-hidden" action="send.php" method="post">
 							<div class="faina-form-line">
 								<div class="faina-form-title">Укажите площадь уборки (м²)</div>
-								<div id="faina-slider-top"
-									class="faina-slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-									data-calc-value="10">
-									<div id="faina-handle-top" class="ui-slider-handle ui-corner-all ui-state-default"
-										tabindex="0" style="left: 0%;"><span>10</span></div>
+								<div id="faina-slider-top" class="faina-slider">
+									<div id="faina-handle-top" class="ui-slider-handle"><span></span></div>
 								</div>
 								<input type="hidden" name="form_square" value="10">
 							</div>
@@ -171,8 +212,8 @@
 								</div>
 							</div>
 							<div class="faina-form-line">
-								<input class="faina-phone" type="text" name="form_tel" data-tel-input=""
-									placeholder="+7 (999) 999-99-99" required="">
+								<input class="faina-phone" type="text" name="form_tel" data-tel-input
+									placeholder="+7 (999) 999-99-99" required>
 							</div>
 							<button class="faina-form-submit">Узнать стоимость уборки</button>
 							<input type="hidden" name="form_goal" value="form_top">
@@ -263,7 +304,7 @@
 									<div class="calculator-radio calculator-radio-typeplace">
 										<div class="calculator-radio-item">
 											<input id="typeplace-1" name="typeplace" type="radio" value="Квартира"
-												data-calc-value="0" checked="">
+												data-calc-value="0" checked>
 											<label for="typeplace-1">
 												<span class="radio-image">
 													<img src="images/uborka-posle-remonta/type-01.png" alt="type">
@@ -319,7 +360,7 @@
 										</div>
 										<div class="calculator-radio-item">
 											<input id="typeclean-2" name="typeclean" type="radio" value="Стандарт"
-												data-calc-value="100" checked="">
+												data-calc-value="100" checked>
 											<label for="typeclean-2">
 												<span class="radio-image">
 													<img src="images/uborka-posle-remonta/typeclean-02.png" alt="type">
@@ -356,11 +397,8 @@
 
 						<div class="calculator-line" style="margin-bottom: 40px;">
 							<label class="calculator-label">Шаг 3: Укажите площадь уборки, м²</label>
-							<div id="slider"
-								class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-								data-calc-value="10">
-								<div id="custom-handle" class="ui-slider-handle ui-corner-all ui-state-default"
-									tabindex="0" style="left: 0%;"><span>10</span></div>
+							<div id="slider">
+								<div id="custom-handle" class="ui-slider-handle"><span></span></div>
 							</div>
 						</div>
 
@@ -451,8 +489,8 @@
 							</div>
 							<div class="calculator-row calculator-row-bottom">
 								<div class="calculator-tel">
-									<input name="form_tel" type="text" class="calculator-phone" data-tel-input=""
-										placeholder="+7 (999) 999-99-99" required="">
+									<input name="form_tel" type="text" class="calculator-phone" data-tel-input
+										placeholder="+7 (999) 999-99-99" required>
 								</div>
 								<div class="calculator-info mobile-hidden">
 									<div class="calculator-info-text">Стоимость уборки:</div>
@@ -689,121 +727,37 @@
 						</div>
 
 						<div class="include-mobile tablet-hidden desktop-hidden">
-							<div class="include-mobile-slider slick-initialized slick-slider"><button
-									class="slick-prev slick-arrow" aria-label="Previous" type="button"
-									style="">Previous</button>
-								<div class="slick-list draggable">
-									<div class="slick-track"
-										style="opacity: 1; width: 0px; transform: translate3d(0px, 0px, 0px);">
-										<div class="include-mobile-item slick-slide slick-cloned" data-slick-index="-4"
-											id="" aria-hidden="true" tabindex="-1" style="width: 0px;">
-											<div class="include-mobile-item-title">Кухня</div>
-											<div class="include-mobile-image">
-												<img src="images/faina/fc6-mob-02.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-cloned" data-slick-index="-3"
-											id="" aria-hidden="true" tabindex="-1" style="width: 0px;">
-											<div class="include-mobile-item-title">Прихожая</div>
-											<div class="include-mobile-image">
-												<img src="images/faina/fc6-mob-03.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-cloned" data-slick-index="-2"
-											id="" aria-hidden="true" tabindex="-1" style="width: 0px;">
-											<div class="include-mobile-item-title">Санузел</div>
-											<div class="include-mobile-image">
-												<img src="images/faina/fc6-mob-04.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-cloned" data-slick-index="-1"
-											id="" aria-hidden="true" tabindex="-1" style="width: 0px;">
-											<div class="include-mobile-item-title">Лоджия</div>
-											<div class="include-mobile-image">
-												<img src="images/faina/fc6-mob-05.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide" data-slick-index="0"
-											aria-hidden="true" style="width: 0px;" tabindex="-1">
-											<div class="include-mobile-item-title">Комнаты</div>
-											<div class="include-mobile-image">
-												<img src="images/faina/fc6-mob-01.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide" data-slick-index="1"
-											aria-hidden="true" tabindex="-1" style="width: 0px;">
-											<div class="include-mobile-item-title">Кухня</div>
-											<div class="include-mobile-image">
-												<img src="images/faina/fc6-mob-02.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide" data-slick-index="2"
-											aria-hidden="true" tabindex="-1" style="width: 0px;">
-											<div class="include-mobile-item-title">Прихожая</div>
-											<div class="include-mobile-image">
-												<img src="images/faina/fc6-mob-03.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide" data-slick-index="3"
-											aria-hidden="true" tabindex="-1" style="width: 0px;">
-											<div class="include-mobile-item-title">Санузел</div>
-											<div class="include-mobile-image">
-												<img src="images/faina/fc6-mob-04.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-current slick-active"
-											data-slick-index="4" aria-hidden="false" tabindex="0" style="width: 0px;">
-											<div class="include-mobile-item-title">Лоджия</div>
-											<div class="include-mobile-image">
-												<img src="images/faina/fc6-mob-05.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-cloned slick-active"
-											data-slick-index="5" id="" aria-hidden="false" tabindex="-1"
-											style="width: 0px;">
-											<div class="include-mobile-item-title">Комнаты</div>
-											<div class="include-mobile-image">
-												<img src="images/faina/fc6-mob-01.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-cloned slick-active"
-											data-slick-index="6" id="" aria-hidden="false" tabindex="-1"
-											style="width: 0px;">
-											<div class="include-mobile-item-title">Кухня</div>
-											<div class="include-mobile-image">
-												<img src="images/faina/fc6-mob-02.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-cloned slick-active"
-											data-slick-index="7" id="" aria-hidden="false" tabindex="-1"
-											style="width: 0px;">
-											<div class="include-mobile-item-title">Прихожая</div>
-											<div class="include-mobile-image">
-												<img src="images/faina/fc6-mob-03.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-cloned" data-slick-index="8"
-											id="" aria-hidden="true" tabindex="-1" style="width: 0px;">
-											<div class="include-mobile-item-title">Санузел</div>
-											<div class="include-mobile-image">
-												<img src="images/faina/fc6-mob-04.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-cloned" data-slick-index="9"
-											id="" aria-hidden="true" tabindex="-1" style="width: 0px;">
-											<div class="include-mobile-item-title">Лоджия</div>
-											<div class="include-mobile-image">
-												<img src="images/faina/fc6-mob-05.jpg" alt="image">
-											</div>
-										</div>
+							<div class="include-mobile-slider">
+								<div class="include-mobile-item">
+									<div class="include-mobile-item-title">Комнаты</div>
+									<div class="include-mobile-image">
+										<img src="images/faina/fc6-mob-01.jpg" alt="image">
 									</div>
 								</div>
-
-
-
-
-								<button class="slick-next slick-arrow" aria-label="Next" type="button"
-									style="">Next</button>
+								<div class="include-mobile-item">
+									<div class="include-mobile-item-title">Кухня</div>
+									<div class="include-mobile-image">
+										<img src="images/faina/fc6-mob-02.jpg" alt="image">
+									</div>
+								</div>
+								<div class="include-mobile-item">
+									<div class="include-mobile-item-title">Прихожая</div>
+									<div class="include-mobile-image">
+										<img src="images/faina/fc6-mob-03.jpg" alt="image">
+									</div>
+								</div>
+								<div class="include-mobile-item">
+									<div class="include-mobile-item-title">Санузел</div>
+									<div class="include-mobile-image">
+										<img src="images/faina/fc6-mob-04.jpg" alt="image">
+									</div>
+								</div>
+								<div class="include-mobile-item">
+									<div class="include-mobile-item-title">Лоджия</div>
+									<div class="include-mobile-image">
+										<img src="images/faina/fc6-mob-05.jpg" alt="image">
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -868,55 +822,43 @@
 				<div class="container">
 					<div class="team-inner">
 						<h2 class="fc5-title">Команда наших профессионалов</h2>
-						<div class="team-row slick-initialized slick-slider">
+						<div class="team-row">
 
-							<div class="slick-list draggable">
-								<div class="slick-track"
-									style="opacity: 1; width: 1100px; transform: translate3d(0px, 0px, 0px);">
-									<div class="team-item slick-slide slick-current slick-active" data-slick-index="0"
-										aria-hidden="false" style="width: 259px;" tabindex="0">
-										<div class="team-name">Фадеева Олеся</div>
-										<div class="team-photo">
-											<img src="images/faina/team-01.png" alt="photo">
-										</div>
-										<div class="team-item-exp">Опыт работы 9 лет</div>
-										<div class="team-description">Более <span>760</span> уборок</div>
-									</div>
-									<div class="team-item slick-slide slick-active" data-slick-index="1"
-										aria-hidden="false" style="width: 259px;" tabindex="0">
-										<div class="team-name">Кулиниченко Людмила</div>
-										<div class="team-photo">
-											<img src="images/faina/team-02.png" alt="photo">
-										</div>
-										<div class="team-item-exp">Опыт работы 5 лет</div>
-										<div class="team-description">Более <span>540</span> уборок</div>
-									</div>
-									<div class="team-item slick-slide slick-active" data-slick-index="2"
-										aria-hidden="false" style="width: 259px;" tabindex="0">
-										<div class="team-name">Гузеева Чулпан</div>
-										<div class="team-photo">
-											<img src="images/faina/team-03.png" alt="photo">
-										</div>
-										<div class="team-item-exp">Опыт работы 8 лет</div>
-										<div class="team-description">Более <span>1000</span> уборок</div>
-									</div>
-									<div class="team-item slick-slide slick-active" data-slick-index="3"
-										aria-hidden="false" style="width: 259px;" tabindex="0">
-										<div class="team-name">Наталья Васильева</div>
-										<div class="team-photo">
-											<img src="images/faina/team-04.png" alt="photo">
-										</div>
-										<div class="team-item-exp">Опыт работы 7 лет</div>
-										<div class="team-description">Более <span>1150</span> уборок</div>
-									</div>
+							<div class="team-item">
+								<div class="team-name">Фадеева Олеся</div>
+								<div class="team-photo">
+									<img src="images/faina/team-01.png" alt="photo">
 								</div>
+								<div class="team-item-exp">Опыт работы 9 лет</div>
+								<div class="team-description">Более <span>760</span> уборок</div>
 							</div>
 
+							<div class="team-item">
+								<div class="team-name">Кулиниченко Людмила</div>
+								<div class="team-photo">
+									<img src="images/faina/team-02.png" alt="photo">
+								</div>
+								<div class="team-item-exp">Опыт работы 5 лет</div>
+								<div class="team-description">Более <span>540</span> уборок</div>
+							</div>
 
+							<div class="team-item">
+								<div class="team-name">Гузеева Чулпан</div>
+								<div class="team-photo">
+									<img src="images/faina/team-03.png" alt="photo">
+								</div>
+								<div class="team-item-exp">Опыт работы 8 лет</div>
+								<div class="team-description">Более <span>1000</span> уборок</div>
+							</div>
 
-
-
-
+							<div class="team-item">
+								<div class="team-name">Наталья Васильева</div>
+								<div class="team-photo">
+									<img src="images/faina/team-04.png" alt="photo">
+								</div>
+								<div class="team-item-exp">Опыт работы 7 лет</div>
+								<div class="team-description">Более <span>1150</span> уборок</div>
+							</div>
 
 						</div>
 					</div>
@@ -935,73 +877,73 @@
 							<div class="reviews-col">
 								<a href="#" class="reviews-item" data-fancybox="video-gallery"
 									data-src="https://www.youtube.com/watch?v=v5zyRaLBGM0">
-									<img src="images/faina/reviews-01.jpg" width="200" height="150">
+									<img src="images/faina/reviews-01.jpg" width="200" height="150" />
 								</a>
 							</div>
 							<div class="reviews-col">
 								<a href="#" class="reviews-item" data-fancybox="video-gallery"
 									data-src="https://www.youtube.com/watch?v=Q3YlMwRiWxA">
-									<img src="images/faina/reviews-02.jpg" width="200" height="150">
+									<img src="images/faina/reviews-02.jpg" width="200" height="150" />
 								</a>
 							</div>
 							<div class="reviews-col">
 								<a href="#" class="reviews-item" data-fancybox="video-gallery"
 									data-src="https://www.youtube.com/watch?v=g3S04oRJxK4">
-									<img src="images/faina/reviews-03.jpg" width="200" height="150">
+									<img src="images/faina/reviews-03.jpg" width="200" height="150" />
 								</a>
 							</div>
 							<div class="reviews-col">
 								<a href="#" class="reviews-item" data-fancybox="video-gallery"
 									data-src="https://www.youtube.com/watch?v=mjA5EuAZHkg">
-									<img src="images/faina/reviews-04.jpg" width="200" height="150">
+									<img src="images/faina/reviews-04.jpg" width="200" height="150" />
 								</a>
 							</div>
 							<div class="reviews-col">
 								<a href="#" class="reviews-item" data-fancybox="video-gallery"
 									data-src="https://www.youtube.com/watch?v=wPq6f_Dal1A">
-									<img src="images/faina/reviews-05.jpg" width="200" height="150">
+									<img src="images/faina/reviews-05.jpg" width="200" height="150" />
 								</a>
 							</div>
 							<div class="reviews-col">
 								<a href="#" class="reviews-item" data-fancybox="video-gallery"
 									data-src="https://www.youtube.com/watch?v=JFjawnlwgKk">
-									<img src="images/faina/reviews-06.jpg" width="200" height="150">
+									<img src="images/faina/reviews-06.jpg" width="200" height="150" />
 								</a>
 							</div>
 							<div class="reviews-col">
 								<a href="#" class="reviews-item" data-fancybox="video-gallery"
 									data-src="https://www.youtube.com/watch?v=rX9mxTzaZfA">
-									<img src="images/faina/reviews-07.jpg" width="200" height="150">
+									<img src="images/faina/reviews-07.jpg" width="200" height="150" />
 								</a>
 							</div>
 							<div class="reviews-col">
 								<a href="#" class="reviews-item" data-fancybox="video-gallery"
 									data-src="https://www.youtube.com/watch?v=KoLy0HEwTy0">
-									<img src="images/faina/reviews-08.jpg" width="200" height="150">
+									<img src="images/faina/reviews-08.jpg" width="200" height="150" />
 								</a>
 							</div>
 							<div class="reviews-col">
 								<a href="#" class="reviews-item" data-fancybox="video-gallery"
 									data-src="https://www.youtube.com/watch?v=1girWCWLfH8">
-									<img src="images/faina/reviews-09.jpg" width="200" height="150">
+									<img src="images/faina/reviews-09.jpg" width="200" height="150" />
 								</a>
 							</div>
 							<div class="reviews-col">
 								<a href="#" class="reviews-item" data-fancybox="video-gallery"
 									data-src="https://www.youtube.com/watch?v=Vw7Ta4pxsIE">
-									<img src="images/faina/reviews-10.jpg" width="200" height="150">
+									<img src="images/faina/reviews-10.jpg" width="200" height="150" />
 								</a>
 							</div>
 							<div class="reviews-col">
 								<a href="#" class="reviews-item" data-fancybox="video-gallery"
 									data-src="https://www.youtube.com/watch?v=dpnN-QPtevs">
-									<img src="images/faina/reviews-11.jpg" width="200" height="150">
+									<img src="images/faina/reviews-11.jpg" width="200" height="150" />
 								</a>
 							</div>
 							<div class="reviews-col">
 								<a href="#" class="reviews-item" data-fancybox="video-gallery"
 									data-src="https://www.youtube.com/watch?v=z-7wKH2xydM">
-									<img src="images/faina/reviews-12.jpg" width="200" height="150">
+									<img src="images/faina/reviews-12.jpg" width="200" height="150" />
 								</a>
 							</div>
 						</div>
@@ -1228,43 +1170,31 @@
 
 
 						<div class="include-mobile desktop-hidden">
-							<div class="include-mobile-slider slick-initialized slick-slider">
+							<div class="include-mobile-slider">
 
-								<div class="slick-list draggable">
-									<div class="slick-track"
-										style="opacity: 1; width: 0px; transform: translate3d(0px, 0px, 0px);">
-										<div class="include-mobile-item slick-slide slick-current slick-active"
-											data-slick-index="0" aria-hidden="false" style="width: 0px;" tabindex="0">
-											<div class="include-mobile-image">
-												<img src="images/faina/fworks-01.jpg" alt="works">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-active" data-slick-index="1"
-											aria-hidden="false" tabindex="0" style="width: 0px;">
-											<div class="include-mobile-image">
-												<img src="images/faina/fworks-02.jpg" alt="works">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-active" data-slick-index="2"
-											aria-hidden="false" tabindex="0" style="width: 0px;">
-											<div class="include-mobile-image">
-												<img src="images/faina/fworks-03.jpg" alt="works">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-active" data-slick-index="3"
-											aria-hidden="false" tabindex="0" style="width: 0px;">
-											<div class="include-mobile-image">
-												<img src="images/faina/fworks-04.jpg" alt="works">
-											</div>
-										</div>
+								<div class="include-mobile-item">
+									<div class="include-mobile-image">
+										<img src="images/faina/fworks-01.jpg" alt="works">
 									</div>
 								</div>
 
+								<div class="include-mobile-item">
+									<div class="include-mobile-image">
+										<img src="images/faina/fworks-02.jpg" alt="works">
+									</div>
+								</div>
 
+								<div class="include-mobile-item">
+									<div class="include-mobile-image">
+										<img src="images/faina/fworks-03.jpg" alt="works">
+									</div>
+								</div>
 
-
-
-
+								<div class="include-mobile-item">
+									<div class="include-mobile-image">
+										<img src="images/faina/fworks-04.jpg" alt="works">
+									</div>
+								</div>
 
 							</div>
 						</div>
@@ -1311,43 +1241,31 @@
 
 						<!-- <div class="include-mobile tablet-hidden desktop-hidden"> -->
 						<div class="include-mobile">
-							<div class="include-mobile-slider slick-initialized slick-slider">
+							<div class="include-mobile-slider">
 
-								<div class="slick-list draggable">
-									<div class="slick-track"
-										style="opacity: 1; width: 1060px; transform: translate3d(0px, 0px, 0px);">
-										<div class="include-mobile-item slick-slide slick-current slick-active"
-											data-slick-index="0" aria-hidden="false" style="width: 253px;" tabindex="0">
-											<div class="include-mobile-image">
-												<img src="images/faina/fc10-mob-01.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-active" data-slick-index="1"
-											aria-hidden="false" style="width: 253px;" tabindex="0">
-											<div class="include-mobile-image">
-												<img src="images/faina/fc10-mob-02.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-active" data-slick-index="2"
-											aria-hidden="false" style="width: 253px;" tabindex="0">
-											<div class="include-mobile-image">
-												<img src="images/faina/fc10-mob-03.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-active" data-slick-index="3"
-											aria-hidden="false" style="width: 253px;" tabindex="0">
-											<div class="include-mobile-image">
-												<img src="images/faina/fc10-mob-04.jpg" alt="image">
-											</div>
-										</div>
+								<div class="include-mobile-item">
+									<div class="include-mobile-image">
+										<img src="images/faina/fc10-mob-01.jpg" alt="image">
 									</div>
 								</div>
 
+								<div class="include-mobile-item">
+									<div class="include-mobile-image">
+										<img src="images/faina/fc10-mob-02.jpg" alt="image">
+									</div>
+								</div>
 
+								<div class="include-mobile-item">
+									<div class="include-mobile-image">
+										<img src="images/faina/fc10-mob-03.jpg" alt="image">
+									</div>
+								</div>
 
-
-
-
+								<div class="include-mobile-item">
+									<div class="include-mobile-image">
+										<img src="images/faina/fc10-mob-04.jpg" alt="image">
+									</div>
+								</div>
 
 							</div>
 						</div>
@@ -1408,76 +1326,61 @@
 				</div> -->
 
 						<div class="include-mobile">
-							<div class="include-mobile-slider slick-initialized slick-slider">
+							<div class="include-mobile-slider">
 
-								<div class="slick-list draggable">
-									<div class="slick-track"
-										style="opacity: 1; width: 1060px; transform: translate3d(0px, 0px, 0px);">
-										<div class="include-mobile-item slick-slide slick-current slick-active"
-											data-slick-index="0" aria-hidden="false" style="width: 253px;" tabindex="0">
-											<div class="include-mobile-image">
-												<img src="images/faina/fc11-mob-01.jpg" alt="image">
-											</div>
-											<div class="include-mobile-content">
-												<div class="include-mobile-title">Химитек</div>
-												<div class="include-mobile-text">НПФ Химитек – российский производитель
-													сертифицированной профессиональной химии. Компания использует
-													собственные разработки, созданные под требования отечественного
-													рынка, предлагает эффективные решения по удалению сложных,
-													застарелых загрязнений.</div>
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-active" data-slick-index="1"
-											aria-hidden="false" style="width: 253px;" tabindex="0">
-											<div class="include-mobile-image">
-												<img src="images/faina/fc11-mob-02.jpg" alt="image">
-											</div>
-											<div class="include-mobile-content">
-												<div class="include-mobile-title">Pro-Brite</div>
-												<div class="include-mobile-text">Профессиональные моющие средства
-													Pro-Brite – продукция одной из ведущих российских компаний в сфере
-													промышленной и бытовой химии начиная с 2003 года. В ассортименте
-													более 700 наименований, разработанных в собственных лабораториях, в
-													том числе десятки эффективных средств для профессионального
-													клининга.</div>
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-active" data-slick-index="2"
-											aria-hidden="false" style="width: 253px;" tabindex="0">
-											<div class="include-mobile-image">
-												<img src="images/faina/fc11-mob-03.jpg" alt="image">
-											</div>
-											<div class="include-mobile-content">
-												<div class="include-mobile-title">Karcher</div>
-												<div class="include-mobile-text">Karcher – один из лидеров среди
-													производителей профессиональной химии в Европе. Компания предлагает
-													широкий спектр сертифицированной продукции для клининга и
-													дезинфекции, предназначенную для удаления сложных загрязнений.</div>
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-active" data-slick-index="3"
-											aria-hidden="false" style="width: 253px;" tabindex="0">
-											<div class="include-mobile-image">
-												<img src="images/faina/fc11-mob-04.jpg" alt="image">
-											</div>
-											<div class="include-mobile-content">
-												<div class="include-mobile-title">Kiilto</div>
-												<div class="include-mobile-text">Бытовая химия Kiilto является
-													продукцией финской компании KiiltoClean, одного из ведущих
-													европейских поставщиков в сфере чистоты и гигиены. Это широкий
-													спектр экологичных и безопасных средств для профессионального
-													клининга получивших высокие оценки от экспертов чистоты из более чем
-													в 18 странах.</div>
-											</div>
-										</div>
+								<div class="include-mobile-item">
+									<div class="include-mobile-image">
+										<img src="images/faina/fc11-mob-01.jpg" alt="image">
+									</div>
+									<div class="include-mobile-content">
+										<div class="include-mobile-title">Химитек</div>
+										<div class="include-mobile-text">НПФ Химитек – российский производитель
+											сертифицированной профессиональной химии. Компания использует собственные
+											разработки, созданные под требования отечественного рынка, предлагает
+											эффективные решения по удалению сложных, застарелых загрязнений.</div>
 									</div>
 								</div>
 
+								<div class="include-mobile-item">
+									<div class="include-mobile-image">
+										<img src="images/faina/fc11-mob-02.jpg" alt="image">
+									</div>
+									<div class="include-mobile-content">
+										<div class="include-mobile-title">Pro-Brite</div>
+										<div class="include-mobile-text">Профессиональные моющие средства Pro-Brite –
+											продукция одной из ведущих российских компаний в сфере промышленной и
+											бытовой химии начиная с 2003 года. В ассортименте более 700 наименований,
+											разработанных в собственных лабораториях, в том числе десятки эффективных
+											средств для профессионального клининга.</div>
+									</div>
+								</div>
 
+								<div class="include-mobile-item">
+									<div class="include-mobile-image">
+										<img src="images/faina/fc11-mob-03.jpg" alt="image">
+									</div>
+									<div class="include-mobile-content">
+										<div class="include-mobile-title">Karcher</div>
+										<div class="include-mobile-text">Karcher – один из лидеров среди производителей
+											профессиональной химии в Европе. Компания предлагает широкий спектр
+											сертифицированной продукции для клининга и дезинфекции, предназначенную для
+											удаления сложных загрязнений.</div>
+									</div>
+								</div>
 
-
-
-
+								<div class="include-mobile-item">
+									<div class="include-mobile-image">
+										<img src="images/faina/fc11-mob-04.jpg" alt="image">
+									</div>
+									<div class="include-mobile-content">
+										<div class="include-mobile-title">Kiilto</div>
+										<div class="include-mobile-text">Бытовая химия Kiilto является продукцией
+											финской компании KiiltoClean, одного из ведущих европейских поставщиков в
+											сфере чистоты и гигиены. Это широкий спектр экологичных и безопасных средств
+											для профессионального клининга получивших высокие оценки от экспертов
+											чистоты из более чем в 18 странах.</div>
+									</div>
+								</div>
 
 							</div>
 						</div>
@@ -1530,113 +1433,38 @@
 
 
 						<div class="include-mobile desktop-hidden">
-							<div class="include-mobile-slider slick-initialized slick-slider"><button
-									class="slick-prev slick-arrow" aria-label="Previous" type="button"
-									style="">Previous</button>
+							<div class="include-mobile-slider">
 
-								<div class="slick-list draggable">
-									<div class="slick-track"
-										style="opacity: 1; width: 0px; transform: translate3d(0px, 0px, 0px);">
-										<div class="include-mobile-item slick-slide slick-cloned" data-slick-index="-4"
-											id="" aria-hidden="true" tabindex="-1" style="width: 0px;">
-											<div class="include-mobile-image">
-												<img src="images/faina/fc12-02.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-cloned" data-slick-index="-3"
-											id="" aria-hidden="true" tabindex="-1" style="width: 0px;">
-											<div class="include-mobile-image">
-												<img src="images/faina/fc12-03.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-cloned" data-slick-index="-2"
-											id="" aria-hidden="true" tabindex="-1" style="width: 0px;">
-											<div class="include-mobile-image">
-												<img src="images/faina/fc12-04.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-cloned" data-slick-index="-1"
-											id="" aria-hidden="true" tabindex="-1" style="width: 0px;">
-											<div class="include-mobile-image">
-												<img src="images/faina/fc12-05.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide" data-slick-index="0"
-											aria-hidden="true" style="width: 0px;" tabindex="-1">
-											<div class="include-mobile-image">
-												<img src="images/faina/fc12-01.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide" data-slick-index="1"
-											aria-hidden="true" tabindex="-1" style="width: 0px;">
-											<div class="include-mobile-image">
-												<img src="images/faina/fc12-02.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide" data-slick-index="2"
-											aria-hidden="true" tabindex="-1" style="width: 0px;">
-											<div class="include-mobile-image">
-												<img src="images/faina/fc12-03.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide" data-slick-index="3"
-											aria-hidden="true" tabindex="-1" style="width: 0px;">
-											<div class="include-mobile-image">
-												<img src="images/faina/fc12-04.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-current slick-active"
-											data-slick-index="4" aria-hidden="false" tabindex="0" style="width: 0px;">
-											<div class="include-mobile-image">
-												<img src="images/faina/fc12-05.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-cloned slick-active"
-											data-slick-index="5" id="" aria-hidden="false" tabindex="-1"
-											style="width: 0px;">
-											<div class="include-mobile-image">
-												<img src="images/faina/fc12-01.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-cloned slick-active"
-											data-slick-index="6" id="" aria-hidden="false" tabindex="-1"
-											style="width: 0px;">
-											<div class="include-mobile-image">
-												<img src="images/faina/fc12-02.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-cloned slick-active"
-											data-slick-index="7" id="" aria-hidden="false" tabindex="-1"
-											style="width: 0px;">
-											<div class="include-mobile-image">
-												<img src="images/faina/fc12-03.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-cloned" data-slick-index="8"
-											id="" aria-hidden="true" tabindex="-1" style="width: 0px;">
-											<div class="include-mobile-image">
-												<img src="images/faina/fc12-04.jpg" alt="image">
-											</div>
-										</div>
-										<div class="include-mobile-item slick-slide slick-cloned" data-slick-index="9"
-											id="" aria-hidden="true" tabindex="-1" style="width: 0px;">
-											<div class="include-mobile-image">
-												<img src="images/faina/fc12-05.jpg" alt="image">
-											</div>
-										</div>
+								<div class="include-mobile-item">
+									<div class="include-mobile-image">
+										<img src="images/faina/fc12-01.jpg" alt="image">
 									</div>
 								</div>
 
+								<div class="include-mobile-item">
+									<div class="include-mobile-image">
+										<img src="images/faina/fc12-02.jpg" alt="image">
+									</div>
+								</div>
 
+								<div class="include-mobile-item">
+									<div class="include-mobile-image">
+										<img src="images/faina/fc12-03.jpg" alt="image">
+									</div>
+								</div>
 
+								<div class="include-mobile-item">
+									<div class="include-mobile-image">
+										<img src="images/faina/fc12-04.jpg" alt="image">
+									</div>
+								</div>
 
+								<div class="include-mobile-item">
+									<div class="include-mobile-image">
+										<img src="images/faina/fc12-05.jpg" alt="image">
+									</div>
+								</div>
 
-
-
-
-
-								<button class="slick-next slick-arrow" aria-label="Next" type="button"
-									style="">Next</button>
 							</div>
 						</div>
 
@@ -1762,12 +1590,8 @@
 							<form class="faina-form faina-form-bottom" action="send.php" method="post">
 								<div class="faina-form-line">
 									<div class="faina-form-title">Укажите площадь уборки (м²)</div>
-									<div id="faina-slider-bottom"
-										class="faina-slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-										data-calc-value="10">
-										<div id="faina-handle-bottom"
-											class="ui-slider-handle ui-corner-all ui-state-default" tabindex="0"
-											style="left: 0%;"><span>10</span></div>
+									<div id="faina-slider-bottom" class="faina-slider">
+										<div id="faina-handle-bottom" class="ui-slider-handle"><span></span></div>
 									</div>
 									<input type="hidden" name="form_square" value="10">
 								</div>
@@ -1787,8 +1611,8 @@
 									</div>
 								</div>
 								<div class="faina-form-line">
-									<input class="faina-phone" type="text" name="form_tel" data-tel-input=""
-										placeholder="+7 (999) 999-99-99" required="">
+									<input class="faina-phone" type="text" name="form_tel" data-tel-input
+										placeholder="+7 (999) 999-99-99" required>
 								</div>
 								<button class="faina-form-submit">Узнать стоимость уборки</button>
 								<input type="hidden" name="form_goal" value="form_bottom">
@@ -1807,7 +1631,7 @@
 			</div>
 
 			<button class="btn-to-top">
-				<img src="/images/arrow-white.svg">
+				<img src="/images/arrow-white.svg" />
 			</button>
 
 			<button class="btn-discount pop-up-open">
@@ -1825,8 +1649,8 @@
 						<div class="popup-text">Оставьте, пожалуйста, свой номер телефона, и наш специалист перезвонит
 							вам, чтобы сориентировать по стоимости работ</div>
 						<form action="send.php" method="post" class="popup-form">
-							<input name="form_tel" type="text" class="popup-input" data-tel-input=""
-								placeholder="+7 (999) 999-99-99" required="">
+							<input name="form_tel" type="text" class="popup-input" data-tel-input
+								placeholder="+7 (999) 999-99-99" required>
 							<button type="submit" class="popup-submit button">Узнать стоимость</button>
 							<input type="hidden" name="form_goal" value="form_popup">
 							<input type="hidden" name="g-recaptcha-response">
@@ -1845,8 +1669,8 @@
 						<div class="popup-text">Оставьте, пожалуйста, свой номер телефона, и наш специалист перезвонит
 							вам, чтобы сориентировать по стоимости работ</div>
 						<form action="send.php" method="post" class="popup-form">
-							<input name="form_tel" type="text" class="popup-input" data-tel-input=""
-								placeholder="+7 (999) 999-99-99" required="">
+							<input name="form_tel" type="text" class="popup-input" data-tel-input
+								placeholder="+7 (999) 999-99-99" required>
 							<button type="submit" class="popup-submit button">Получить скидку</button>
 							<input type="hidden" name="form_goal" value="form_popup">
 							<input type="hidden" name="g-recaptcha-response">
@@ -1926,7 +1750,7 @@
 
 	<link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">
 	<script type="text/javascript" src="https://cdn.envybox.io/widget/cbk.js?wcb_code=e2150b31771f88773fe00318e46eb77a"
-		charset="UTF-8" async=""></script>
+		charset="UTF-8" async></script>
 
 	<!-- <script src="https://www.google.com/recaptcha/api.js?render=6LfmEyMjAAAAAOQ3ogsUURodF68dSXUVmAMCiGD5"></script>
 <script>
@@ -1944,38 +1768,12 @@
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/jquery.ui.touch-punch.min.js"></script>
 	<script src="js/jquery.inputmask.min.js"></script>
-	<script type="text/javascript"
-		id="">(function (b,e,f,g,c,a,d) { b[c] = b[c] || function () { (b[c].a = b[c].a || []).push(arguments) }; b[c].l = 1 * new Date; for (a = 0; a < document.scripts.length; a++)if (document.scripts[a].src === g) return; a = e.createElement(f); d = e.getElementsByTagName(f)[0]; a.async = 1; a.src = g; d.parentNode.insertBefore(a,d) })(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym"); ym(google_tag_manager["GTM-K7W6659"].macro(2),"init",{ clickmap: !0,trackLinks: !0,accurateTrackBounce: !0 });</script>
-	<noscript>
-		<div><img src="https://mc.yandex.ru/watch/93681553" style="position:absolute; left:-9999px;" alt=""></div>
-	</noscript>
-	<script type="text/javascript" id="">var settings = { need: 30,checkTime: 10,IDmetrika: google_tag_manager["GTM-K7W6659"].macro(3) },metricsFn = function () { console.log(ActiveScore.timer); console.log(ActiveScore.need); var a = this.getCookie(this.cookieName); console.log(a); ActiveScore.timer >= ActiveScore.need && (console.log("\u0441\u043e\u0431\u044b\u0442\u0438\u0435 \u043e\u0442\u043f\u0440\u0430\u0432\u0438\u043b\u043e\u0441\u044c"),ym(settings.IDmetrika,"reachGoal",this.cookieName.slice(0,-3))) },ActiveScore = {
-			need: settings.need,checkTime: settings.checkTime,loop: !0,counter: 0,
-			cookieName: "60sec_ap",sendFn: null,parts: 0,active_parts: 0,timer: 0,events: "touchmove blur focus focusin focusout load resize scroll unload click dblclick mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave change select submit keydown keypress keyup error".split(" "),setEvents: function () { for (var a = 0; a < this.events.length; a++) { var c = this.events[a]; window.addEventListener(c,function (d) { d.isTrusted && 0 == ActiveScore.period.events && (ActiveScore.period.events = !0) }) } },period: {
-				start: 0,end: 0,
-				events: !1
-			},init: function (a) { this.calcParts(); this.setEvents(); this.setStartCounter(); this.checkCookie() && (this.sendFn = a,this.start()) },readLastCookie: function () { for (var a = 1E5,c = 1; c < a; c++) { var d = this.getCookie(c * this.need + "sec_ap"); if (d != this.parts * this.parts) return { i: c,cookie: d } } return { i: 1,cookie: 0 } },setStartCounter: function () { var a = this.readLastCookie(); this.counter = a.i - 1; this.active_parts = Number(a.cookie); this.cookieName = (this.counter + 1) * this.need + "sec_ap" },calcParts: function () {
-				this.parts = Math.ceil(this.need /
-					this.checkTime)
-			},setPeriod: function () { this.period.start = this.microtime(); this.period.end = this.period.start + this.checkTime; this.period.events = !1 },microtime: function () { var a = (new Date).getTime() / 1E3; return a = parseInt(a) },start: function () { this.setPeriod(); this.runPeriod() },timeoutId: null,checkPeriod: function () {
-				1 == this.period.events && (this.active_parts += 1); this.timer = this.active_parts * this.checkTime; console.log(this.active_parts + " / " + this.parts + " [" + this.timer + "]"); this.checkSecs() || this.start(); this.setCookie(this.cookieName,
-					this.active_parts)
-			},checkSecs: function () { if (this.timer >= this.need) if (this.send(),1 == this.loop) this.counter++,this.active_parts = this.timer = 0,this.cookieName = (this.counter + 1) * this.need + "sec_ap"; else return !0; return !1 },timeoutFn: function () { ActiveScore.checkPeriod() },runPeriod: function () { this.timeoutId = setTimeout(this.timeoutFn,1E3 * this.checkTime) },send: function () {
-				this.getCookie(this.cookieName) == this.parts * this.parts ? this.setStartCounter() : this.setCookie(this.cookieName,this.active_parts * this.active_parts);
-				this.sendFn()
-			},checkCookie: function () { var a = this.getCookie(this.cookieName); if (null == a || "" == a) return !0; a = parseInt(a); if (a >= this.parts) return 1 == this.loop ? !0 : !1; this.active_parts = a; return !0 },setCookie: function (a,c,d) { var b = ""; d && (b = new Date,b.setTime(b.getTime() + 864E5 * d),b = "; expires\x3d" + b.toUTCString()); document.cookie = a + "\x3d" + (c || "") + b + "; path\x3d/" },getCookie: function (a) {
-				a += "\x3d"; for (var c = document.cookie.split(";"),d = 0; d < c.length; d++) {
-					for (var b = c[d]; " " == b.charAt(0);)b = b.substring(1,b.length);
-					if (0 == b.indexOf(a)) return b.substring(a.length,b.length)
-				} return null
-			},eraseCookie: function (a) { document.cookie = a + "\x3d; Path\x3d/; Expires\x3dThu, 01 Jan 1970 00:00:01 GMT;" }
-		}; ActiveScore.init(metricsFn);</script>
 	<script src="js/fancybox.umd.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/imagesloaded.pkgd.min.js"></script>
 	<script src="js/phoneinput.js"></script>
 	<script src="js/masonry.pkgd.min.js"></script>
-	<script src="js/script.js"></script>
+	<script src="js/script.js?ver=027"></script>
 
 	<script>
 
@@ -2012,8 +1810,6 @@
 	<script>
 		const counterId = 88122775;
 	</script>
-
-	<script src="https://content.saas-support.com/build/widget/widget.min-89cd1b652b.js" charset="utf-8"></script>
 </body>
 
 </html>
